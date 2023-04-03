@@ -1,19 +1,7 @@
-body {
-  background-color: black;
-}
-
-.box {
-  border: 1px solid greenyellow;
-  width: 300px;
-  height: 700px;
-  margin: 5% auto 5%;
-}
-
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -75,10 +63,7 @@ video {
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-      -ms-text-size-adjust: none;
-          text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 footer,
@@ -119,4 +104,4 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
-}/*# sourceMappingURL=main.css.map */
+}
