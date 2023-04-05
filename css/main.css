@@ -1,20 +1,9 @@
 body {
-  background-color: aqua;
+  background-color: black;
 }
 
 a {
   text-decoration: none;
-}
-
-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 300px;
-}
-@media screen and (min-width: 768px) {
-  img {
-    height: 395px;
-  }
 }
 
 .container {
@@ -32,7 +21,7 @@ img {
 }
 
 .box {
-  border: 1px solid red;
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 300px;
@@ -50,20 +39,26 @@ img {
 }
 
 .photo__box {
-  -o-object-fit: contain;
-     object-fit: contain;
+  background-image: url("../../img/img.jpg");
+  background-size: cover;
+  background-position: center;
   width: 300px;
   height: 45vh;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 @media screen and (min-width: 768px) {
   .photo__box {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    width: 400px;
     height: 395px;
   }
 }
 
 .about__box {
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,17 +92,17 @@ img {
 }
 
 .about__me {
+  background-color: black;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: bisque;
 }
 
 .social_media {
-  background-color: pink;
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,6 +110,14 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .social_media {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
 }
 
 .social_media > div {
@@ -129,6 +132,157 @@ img {
       justify-content: space-around;
 }
 
+.box:before,
+.box:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(45deg, red, rgb(255, 94, 0), rgb(255, 230, 0), rgb(187, 255, 0), rgb(34, 255, 0), rgb(0, 255, 187), rgb(0, 204, 255), rgb(0, 26, 255), rgb(111, 0, 255), rgb(204, 0, 255), rgb(255, 0, 230), rgb(255, 0, 93), rgb(255, 0, 68), red, rgb(255, 94, 0), rgb(255, 230, 0), rgb(187, 255, 0), rgb(34, 255, 0), rgb(0, 255, 187), rgb(0, 204, 255), rgb(0, 26, 255), rgb(111, 0, 255), rgb(204, 0, 255), rgb(255, 0, 230), rgb(255, 0, 93), rgb(255, 0, 68));
+  background-size: 200%;
+  border-radius: 20px;
+  z-index: -1;
+  -webkit-animation: anim 20s linear infinite;
+          animation: anim 20s linear infinite;
+  width: 300px;
+  height: 90vh;
+}
+@media screen and (min-width: 768px) {
+  .box:before,
+  .box:after {
+    width: 100%;
+    height: 395px;
+  }
+}
+
+@-webkit-keyframes anim {
+  0% {
+    background-position: 300% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes anim {
+  0% {
+    background-position: 300% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+.box:after {
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+
+.about__box a,
+.about__box p,
+svg {
+  -webkit-animation: draw 20s infinite;
+          animation: draw 20s infinite;
+}
+
+/* stroke-dasharray: 10; */
+@-webkit-keyframes draw {
+  0% {
+    color: rgb(255, 0, 0);
+    fill: rgb(255, 0, 0);
+  }
+  10% {
+    color: rgb(255, 94, 0);
+    fill: rgb(255, 94, 0);
+  }
+  20% {
+    color: rgb(255, 230, 0);
+    fill: rgb(255, 230, 0);
+  }
+  30% {
+    color: rgb(34, 255, 0);
+    fill: rgb(34, 255, 0);
+  }
+  40% {
+    color: rgb(0, 204, 255);
+    fill: rgb(0, 204, 255);
+  }
+  50% {
+    color: rgb(0, 26, 255);
+    fill: rgb(0, 26, 255);
+  }
+  60% {
+    color: rgb(111, 0, 255);
+    fill: rgb(111, 0, 255);
+  }
+  70% {
+    color: rgb(204, 0, 255);
+    fill: rgb(204, 0, 255);
+  }
+  80% {
+    color: rgb(255, 0, 230);
+    fill: rgb(255, 0, 230);
+  }
+  90% {
+    color: rgb(255, 0, 179);
+    fill: rgb(255, 0, 179);
+  }
+  100% {
+    color: rgb(255, 0, 68);
+    fill: rgb(255, 0, 68);
+  }
+}
+@keyframes draw {
+  0% {
+    color: rgb(255, 0, 0);
+    fill: rgb(255, 0, 0);
+  }
+  10% {
+    color: rgb(255, 94, 0);
+    fill: rgb(255, 94, 0);
+  }
+  20% {
+    color: rgb(255, 230, 0);
+    fill: rgb(255, 230, 0);
+  }
+  30% {
+    color: rgb(34, 255, 0);
+    fill: rgb(34, 255, 0);
+  }
+  40% {
+    color: rgb(0, 204, 255);
+    fill: rgb(0, 204, 255);
+  }
+  50% {
+    color: rgb(0, 26, 255);
+    fill: rgb(0, 26, 255);
+  }
+  60% {
+    color: rgb(111, 0, 255);
+    fill: rgb(111, 0, 255);
+  }
+  70% {
+    color: rgb(204, 0, 255);
+    fill: rgb(204, 0, 255);
+  }
+  80% {
+    color: rgb(255, 0, 230);
+    fill: rgb(255, 0, 230);
+  }
+  90% {
+    color: rgb(255, 0, 179);
+    fill: rgb(255, 0, 179);
+  }
+  100% {
+    color: rgb(255, 0, 68);
+    fill: rgb(255, 0, 68);
+  }
+}
 *,
 *:before,
 *:after {
