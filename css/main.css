@@ -146,7 +146,7 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  background: linear-gradient(45deg, red, rgb(255, 94, 0), rgb(255, 230, 0), rgb(187, 255, 0), rgb(34, 255, 0), rgb(0, 255, 187), rgb(0, 204, 255), rgb(0, 26, 255), rgb(111, 0, 255), rgb(204, 0, 255), rgb(255, 0, 230), rgb(255, 0, 93), rgb(255, 0, 68), red, rgb(255, 94, 0), rgb(255, 230, 0), rgb(187, 255, 0), rgb(34, 255, 0), rgb(0, 255, 187), rgb(0, 204, 255), rgb(0, 26, 255), rgb(111, 0, 255), rgb(204, 0, 255), rgb(255, 0, 230), rgb(255, 0, 93), rgb(255, 0, 68));
+  background: linear-gradient(45deg, red, rgb(255, 94, 0), rgb(255, 230, 0), rgb(187, 255, 0), rgb(34, 255, 0), rgb(0, 255, 187), rgb(0, 204, 255), rgb(0, 26, 255), rgb(111, 0, 255), rgb(204, 0, 255), rgb(255, 0, 230), rgb(255, 0, 93), rgb(255, 0, 68));
   background-size: 200%;
   border-radius: 20px;
   z-index: -1;
