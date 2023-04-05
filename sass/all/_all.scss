@@ -5,13 +5,17 @@ body {
 a {
   text-decoration: none;
 }
-// img {
-//   object-fit: cover;
-//   height: 300px;
-//   @media screen and (min-width: 768px) {
-//     height: 395px;
-//   }
-// }
+img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 300px;
+  object-fit: cover;
+  @media screen and (min-width: 768px) {
+    height: 393px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+  }
+}
 .container {
   width: 100%;
   height: 100vh;
@@ -28,21 +32,13 @@ a {
   @media screen and (min-width: 768px) {
     display: flex;
     width: 80vw;
-    height: 395px;
+    height: 393px;
   }
 }
 .photo__box {
-  background-color: black;
-  background-image: url("../../img/img.jpg");
-  background-size: cover;
-  background-position: center;
   width: 300px;
   height: 45vh;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
   @media screen and (min-width: 768px) {
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 20px;
     width: 400px;
     height: 395px;
   }
@@ -131,7 +127,7 @@ a {
   height: 90vh;
   @media screen and (min-width: 768px) {
     width: 100%;
-    height: 395px;
+    height: 393px;
   }
 }
 
